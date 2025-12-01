@@ -41,12 +41,12 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Services</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Services</h2>
+          <div className="w-20 h-1 bg-gray-600 mx-auto rounded-full mb-4"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive DevOps solutions to accelerate your development workflow and optimize infrastructure
           </p>
         </div>
@@ -55,17 +55,17 @@ function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 group"
+              className="bg-gray-900 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-700 hover:border-gray-600 group"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <service.icon className="h-7 w-7 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <service.icon className="h-7 w-7 text-gray-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+              <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
               <div className="space-y-2">
                 {service.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center text-sm text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
+                  <div key={idx} className="flex items-center text-sm text-gray-300">
+                    <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-2"></div>
                     {feature}
                   </div>
                 ))}

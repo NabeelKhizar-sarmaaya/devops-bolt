@@ -77,12 +77,12 @@ function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <div className="w-20 h-1 bg-gray-600 mx-auto rounded-full mb-4"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Real-world infrastructure projects that delivered measurable business impact
           </p>
         </div>
@@ -91,23 +91,23 @@ function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl border border-gray-200 hover:border-blue-300 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+              className="bg-gray-800 rounded-xl border border-gray-700 hover:border-gray-600 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
             >
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Technologies Used</h4>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-3">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-200"
+                        className="px-3 py-1 bg-gray-700 text-gray-300 text-sm font-medium rounded-full border border-gray-600"
                       >
                         {tech}
                       </span>
@@ -116,28 +116,28 @@ function Projects() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Outcomes</h4>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Outcomes</h4>
                   <div className="space-y-2">
                     {project.outcomes.map((outcome, idx) => (
                       <div key={idx} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3 mt-2"></div>
-                        <span className="text-gray-700 text-sm">{outcome}</span>
+                        <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-3 mt-2"></div>
+                        <span className="text-gray-400 text-sm">{outcome}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="flex gap-4 pt-4 border-t border-gray-200">
+                <div className="flex gap-4 pt-4 border-t border-gray-700">
                   <a
                     href={project.github}
-                    className="inline-flex items-center text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors"
+                    className="inline-flex items-center text-gray-400 hover:text-gray-200 font-medium text-sm transition-colors"
                   >
                     <Github className="h-4 w-4 mr-2" />
                     View Code
                   </a>
                   <a
                     href={project.demo}
-                    className="inline-flex items-center text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors"
+                    className="inline-flex items-center text-gray-400 hover:text-gray-200 font-medium text-sm transition-colors"
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Case Study

@@ -96,44 +96,44 @@ function Skills() {
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'Expert':
-        return 'text-green-700 bg-green-100 border-green-300';
+        return 'text-green-400 bg-green-900 border-green-700';
       case 'Advanced':
-        return 'text-blue-700 bg-blue-100 border-blue-300';
+        return 'text-blue-400 bg-blue-900 border-blue-700';
       case 'Intermediate':
-        return 'text-orange-700 bg-orange-100 border-orange-300';
+        return 'text-orange-400 bg-orange-900 border-orange-700';
       default:
-        return 'text-gray-700 bg-gray-100 border-gray-300';
+        return 'text-gray-400 bg-gray-800 border-gray-700';
     }
   };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Certifications</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Skills & Certifications</h2>
+          <div className="w-20 h-1 bg-gray-600 mx-auto rounded-full mb-4"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive technical expertise backed by industry-recognized certifications
           </p>
         </div>
 
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Technical Skills</h3>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Technical Skills</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200"
+                className="bg-gray-900 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-700"
               >
-                <h4 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                <h4 className="text-lg font-bold text-white mb-4 pb-2 border-b border-gray-700">
                   {category.category}
                 </h4>
                 <div className="space-y-3">
                   {category.skills.map((skill, idx) => (
                     <div key={idx} className="flex items-center justify-between">
                       <div className="flex items-center flex-1">
-                        <CheckCircle2 className="h-4 w-4 text-blue-600 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{skill.name}</span>
+                        <CheckCircle2 className="h-4 w-4 text-gray-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{skill.name}</span>
                       </div>
                       <span className={`text-xs font-medium px-2 py-1 rounded border ml-2 ${getLevelColor(skill.level)}`}>
                         {skill.level}
@@ -147,22 +147,22 @@ function Skills() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Certifications</h3>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Certifications</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-200 hover:border-blue-300 group"
+                className="bg-gray-900 rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-700 hover:border-gray-600 group"
               >
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-blue-600 transition-colors">
-                    <Award className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                  <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-gray-700 transition-colors">
+                    <Award className="h-6 w-6 text-gray-400 group-hover:text-gray-300 transition-colors" />
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900 mb-2 leading-tight">
+                    <h4 className="text-base font-bold text-white mb-2 leading-tight">
                       {cert.name}
                     </h4>
-                    <p className="text-sm text-gray-600 mb-1">{cert.issuer}</p>
+                    <p className="text-sm text-gray-400 mb-1">{cert.issuer}</p>
                     <p className="text-xs text-gray-500">{cert.year}</p>
                   </div>
                 </div>
